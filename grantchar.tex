@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{pgfgantt}
+
+\title{Gantt Chart}
+\author{Salvador Pineda Morente}
+\date{April 2018}
+
+\begin{document}
+
+\maketitle
+
+\noindent\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[y=0.1cm]
+\begin{ganttchart}[vgrid,
+y unit title=0.7cm,
+y unit chart=0.7cm,
+title height=1,
+bar height=0.7,
+bar/.style={fill=gray!50}
+]{1}{36}
+\gantttitle{Year 1}{12}
+\gantttitle{Year 2}{12}
+\gantttitle{Year 3}{12}\\
+\gantttitlelist{1,...,12}{1} 
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1}\\
+\ganttbar{Task 1}{1}{4} \\
+\ganttbar{Task 2}{6}{24} \\
+\ganttbar{Task 3}{20}{36}
+\end{ganttchart}
+\end{tikzpicture}}
+
+\vspace{1cm}
+
+\noindent\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[y=0.1cm]
+\begin{ganttchart}[vgrid,
+y unit title=0.7cm,
+y unit chart=0.7cm,
+title height=1,
+bar height=0.7,
+]{1}{36}
+\gantttitle{Year 1}{12}
+\gantttitle{Year 2}{12}
+\gantttitle{Year 3}{12}\\
+\gantttitlelist{1,...,12}{1} 
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1}\\
+\ganttset{progress label text={},
+bar/.style={fill=green!40},
+group/.append style={draw=black, fill=green},}
+\ganttgroup{O1/T1}{1}{7} \\
+\ganttbar{T1.1}{1}{4} \\
+\ganttbar{T1.2}{6}{24} \\
+\ganttbar{T1.3}{20}{36} \\
+\ganttset{progress label text={},
+bar/.style={fill=blue!40},
+group/.append style={draw=black, fill=blue},}
+\ganttgroup{O2/T2}{1}{7} \\
+\ganttbar{Task 1}{1}{4} \\
+\ganttbar{Task 2}{6}{24} \\
+\ganttbar{Task 3}{20}{36}
+\end{ganttchart}
+\end{tikzpicture}}
+
+\vspace{1cm}
+
+\noindent\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[y=0.1cm]
+\begin{ganttchart}[vgrid,
+y unit title=0.7cm,
+y unit chart=0.7cm,
+title height=1,
+bar height=0.7,
+]{1}{36}
+\gantttitle{Year 1}{12}
+\gantttitle{Year 2}{12}
+\gantttitle{Year 3}{12}\\
+\gantttitlelist{1,...,12}{1} 
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1}\\
+%
+\ganttset{progress label text={},
+bar/.style={fill=green!40},
+group/.append style={draw=green, fill=green},}
+\ganttgroup{O1/T1}{1}{14} \\
+\ganttbar[name=11]{T1.1}{1}{2} \\
+\ganttbar[name=12]{T1.2}{3}{8} \\
+\ganttbar[name=13]{T1.3}{7}{12} \\
+\ganttbar[name=14]{T1.4}{11}{14} \\
+%
+\ganttset{progress label text={},
+bar/.style={fill=red!40},
+group/.append style={draw=red, fill=red},}
+\ganttgroup{O2/T2}{1}{14} \\
+\ganttbar[name=21]{T2.1}{1}{2} \\
+\ganttbar[name=22]{T2.2}{3}{8} \\
+\ganttbar[name=23]{T2.3}{7}{12} \\
+\ganttbar[name=24]{T2.4}{11}{14} \\
+%
+\ganttset{progress label text={},
+bar/.style={fill=blue!40},
+group/.append style={draw=blue, fill=blue},}
+\ganttgroup{O3/T3}{15}{29} \\
+\ganttbar[name=31]{T3.1}{15}{16} \\
+\ganttbar[name=32]{T3.2}{17}{23} \\
+\ganttbar[name=33]{T3.3}{17}{23} \\
+\ganttbar[name=34]{T3.4}{24}{29} \\
+%
+\ganttset{progress label text={},
+bar/.style={fill=orange!40},
+group/.append style={draw=orange, fill=orange},}
+\ganttgroup{O4/T4}{22}{36} \\
+\ganttbar[name=41]{T4.1}{22}{23} \\
+\ganttbar[name=42]{T4.2}{24}{30} \\
+\ganttbar[name=43]{T4.3}{24}{30} \\
+\ganttbar[name=44]{T4.4}{31}{36} \\
+%
+\ganttlink[]{11}{12}
+\ganttlink[]{12}{13}
+\ganttlink[]{13}{14}
+\ganttlink[]{21}{22}
+\ganttlink[]{22}{23}
+\ganttlink[]{23}{24}
+\ganttlink[]{31}{32}
+\ganttlink[]{14}{32}
+\ganttlink[link mid=0.25]{31}{33}
+\ganttlink[link mid=0.2]{24}{33}
+\ganttlink[link mid=0.75]{32}{34}
+\ganttlink[]{33}{34}
+\ganttlink[]{41}{42}
+\ganttlink[link mid=0.25]{41}{43}
+\ganttlink[]{14}{42}
+\ganttlink[]{24}{43}
+\ganttlink[link mid=0.65]{32}{42}
+\ganttlink[link mid=0.45]{33}{43}
+\ganttlink[link mid=0.75]{42}{44}
+\ganttlink[]{43}{44}
+\end{ganttchart}
+\end{tikzpicture}}
+
+
+
+
+\end{document}

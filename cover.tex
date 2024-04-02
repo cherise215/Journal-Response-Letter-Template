@@ -1,0 +1,28 @@
+%\title{Example letter using the newlfm LaTeX package}
+%
+% See http://texblog.org/2013/11/11/latexs-alternative-letter-class-newlfm/
+% and http://www.ctan.org/tex-archive/macros/latex/contrib/newlfm
+% for more information.
+%
+\documentclass[12pt,stdletter,orderfromtodate,sigleft]{newlfm}
+\usepackage{blindtext, xfrac}
+ 
+\newlfmP{dateskipbefore=-80pt}
+\newlfmP{sigsize=0pt}
+\newlfmP{sigskipbefore=0pt}
+ 
+\newlfmP{Headlinewd=0pt,Footlinewd=0pt}
+ 
+\dateset{April 6, 2017}
+ 
+\greetto{Dear Editor of XXXX,}
+ 
+\closeline{Sincerely, \newline Salvador Pineda Morente}
+ 
+\begin{document}
+\begin{newlfm}
+
+XXXX
+
+\end{newlfm}
+\end{document}
