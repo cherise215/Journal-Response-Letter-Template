@@ -4,7 +4,7 @@ Responding to peer reviewer comments can often be a daunting task, especially wh
 
 ## Features
 
-1. **Hyperlink Navigation**: Easily navigate to a specific reviewer's response section by clicking on hyperlinks.
+1. **Hyperlink Navigation**: Easily navigate to the section of response to a specific reviewer's comments by clicking on hyperlinks.
 2. **Automatic Numbering**: Reviewer's questions and your responses are automatically numbered for clarity and organization.
 3. **Revised Text Box**: A dedicated section to include your revised text, saving reviewers time by providing them with immediate access to your changes.
 
